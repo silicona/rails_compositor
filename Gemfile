@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) do |repo_name|
-  repo_name = "
-  "https://github.com/
+  repo_name = "https://github.com/"
 end
 ruby '2.3.3'
 gem 'rails', '~> 5.0.1'

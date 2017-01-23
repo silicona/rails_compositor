@@ -4,8 +4,8 @@
     <!-- Page Header -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Page Heading
-                <small>Secondary Text</small>
+            <h1 class="page-header">Cabecera
+                <small>Texto secundario</small>
             </h1>
         </div>
     </div>
@@ -14,20 +14,26 @@
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-6 portfolio-item">
-            <a href="#">
+            <!--<a href="#">
                 <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
+            </a>-->
+            <img src="/assets/vaca.jpeg">
             <h3>
-                <a href="#">Project One</a>
+                <a href="#">Usuarios</a>
             </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <% @usuarios.each do |usuario| %>
+            <ul>
+                <li><%= usuario.name %>, <%= usuario.email %></li>
+                <li><%= usuario.encrypted_password %></li>
+            </ul>
+            <% end %>
         </div>
         <div class="col-md-6 portfolio-item">
             <a href="#">
                 <img class="img-responsive" src="http://placehold.it/700x400" alt="">
             </a>
             <h3>
-                <a href="#">Project Two</a>
+                <a href="#">Segundo proyecto</a>
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>

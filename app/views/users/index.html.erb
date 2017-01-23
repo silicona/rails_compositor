@@ -1,16 +1,31 @@
 <div class="container">
   <div class="row">
-    <h3>Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+    <h3>Configuracion de cuenta</h3>
+    <div class="span3">
+      <ul class="nav nav-list">
+        <li class="nav-header">Menú del Users para el Usuario</li>
+        <li>
+          <%= link_to 'Información básica', edit_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to 'Editar Perfil', perfil_path(current_user.id) %>
+        </li>
+      </ul> 
     </div>
   </div>
 </div>
+
+
+<!-- Antes de añadir <div class="span3"> e interior
+<div class="column">
+  <table class="table">
+        <tbody>
+          <%# @users.each do |user| %>
+            <tr>
+              <%# render user %>
+            </tr>
+          <%# end %>
+        </tbody>
+      </table>
+</div>  
+  -->
